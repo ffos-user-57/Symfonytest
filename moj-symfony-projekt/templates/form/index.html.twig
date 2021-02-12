@@ -1,0 +1,42 @@
+<html>
+<head>
+<link rel="stylesheet" href="{{ asset('css/mystyle.css') }}" />
+</head>
+
+<body>
+<p hidden> The text color is comming from a css file ! </p>
+<center>
+<h1 style="color:black"> Dobrodošli </h1>
+<br><hr>
+<p> Unesite izostanke : </p>
+<form action="{{ path("hello_page") }}">
+	<input type="text" name="submit">
+	<input type="submit">
+</form>
+
+</center>
+<br><hr>
+<a href="{{ path("hello_page") }}">Hello world link</a>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

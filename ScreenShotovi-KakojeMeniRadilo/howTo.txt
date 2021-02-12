@@ -1,0 +1,8 @@
+Ostali templateovi ne rade  
+samo pokrenete server i trebalo bi na localhost:8000 dobro prikazati
+
+isto sto i na slici 2izostanak.png  i tamo unesete broj izostanaka i prenese se GETom i samo ispise, podjeli da se vidi kolko je to posto izostanaka u odnosu na predavanja+seminare 
+
+nez sta sam jos mogao dodati al eto valjda valja
+
+mogao sam mozda otic u ovom if statementu gdje provjerava jeli broj unesen (broj izostanaka) 3 (ili manji od 3) oduzeti to od 3  da dobijemo koliko jos smijemo izostati - ali kako već imamo custom message za ispod 3, 3 , a i iznad 3 onda ne treba valjda

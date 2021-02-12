@@ -1,0 +1,35 @@
+
+{% extends 'base.html.twig' %}
+
+{% block main %}
+	Pozdrav svijete! <br> 
+	Vi imate <b>{{ app.request.query.get("submit") | default("Niste unjeli podatke") }} </b> 
+	izostanaka !!
+	<br> 
+	Ukupno predavanja (predavanja+seminari) : 45
+	<br>
+	<hr>
+	
+	Postotak izostajanja : {{ app.request.query.get("submit") /45*100 }} 
+	<br>
+	
+	Ako vise ne izostanete mozete biti ukupno na ovoliko predavanja  : {{45-app.request.query.get("submit")}} | 45
+	<br>
+	Dozovljenih izostanaka total : 3 
+	<br>
+	<br/>
+	<b> Konkluzija : </b>
+
+	{% if app.request.query.get("submit") == 3 %}
+		<p>Ne smijete više izostajati - napunili ste 3 izostanka ! </p>
+	{% endif %}
+	{% if app.request.query.get("submit") > 3 %}
+		<p>Previše ste izostali  ! </p>
+	{% endif %}
+	{% if app.request.query.get("submit") < 3 %}
+		<p>Smijete još izostajati ! </p>
+	{% endif %}
+
+	
+	
+{% endblock %}
